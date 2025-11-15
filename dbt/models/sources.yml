@@ -1,10 +1,10 @@
 version: 2
 
 sources:
-  - name: raw
+  - name: adventureworks_customer
     description: "AdventureWorks 2014 source database"
     database: AdventureWorks2014
-    schema: dbo
+    schema: Sales
 
     # Default freshness for all tables
     freshness:
@@ -45,23 +45,3 @@ sources:
           - name: CustomerID
             tests:
               - not_null
-
-      - name: Person
-        description: "Raw person data from AdventureWorks"
-        identifier: Person
-
-      - name: SalesOrderDetail
-        description: "Raw sales order detail data from AdventureWorks"
-        identifier: SalesOrderDetail
-
-      - name: Product
-        description: "Raw product data from AdventureWorks"
-        identifier: Product
-
-      - name: ProductCategory
-        description: "Raw product category data from AdventureWorks"
-        identifier: ProductCategory
-
-      - name: ProductSubcategory
-        description: "Raw product subcategory data from AdventureWorks"
-        identifier: ProductSubcategory

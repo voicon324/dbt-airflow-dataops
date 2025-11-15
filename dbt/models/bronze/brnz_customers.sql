@@ -5,7 +5,7 @@
 }}
 
 with source as (
-    select * from {{ source('adventureworks', 'Customer') }}
+    select * from {{ source('adventureworks_customer', 'Customer') }}
 ),
 
 person as (
