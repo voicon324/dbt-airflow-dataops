@@ -78,12 +78,14 @@ jobs:
           dbt deps
 
       - name: Compile DBT models
+        id: dbt-compile
         run: |
           cd dbt
           dbt compile --profiles-dir . || true
         continue-on-error: true
 
       - name: Upload compiled artifacts
+        if: always() && hashFiles('dbt/target/**') != ''
         uses: actions/upload-artifact@v4
         with:
           name: dbt-compiled
@@ -114,12 +116,14 @@ jobs:
           dbt deps
 
       - name: Generate documentation
+        id: dbt-docs
         run: |
           cd dbt
           dbt docs generate --profiles-dir . || true
         continue-on-error: true
 
       - name: Upload documentation
+        if: always() && hashFiles('dbt/target/catalog.json') != ''
         uses: actions/upload-artifact@v4
         with:
           name: dbt-docs
