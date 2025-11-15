@@ -1,7 +1,7 @@
 # DBT + Airflow + SQL Server DataOps Project
 
-![DBT CI](https://github.com/voicon324/dbt-airflow-dataops/workflows/DBT%20CI%20Pipeline/badge.svg)
-![Python Quality](https://github.com/voicon324/dbt-airflow-dataops/workflows/Python%20Code%20Quality/badge.svg)
+[![DBT CI Pipeline](https://github.com/voicon324/dbt-airflow-dataops/actions/workflows/dbt-ci.yml/badge.svg)](https://github.com/voicon324/dbt-airflow-dataops/actions/workflows/dbt-ci.yml)
+[![Python Code Quality](https://github.com/voicon324/dbt-airflow-dataops/actions/workflows/python-quality.yml/badge.svg)](https://github.com/voicon324/dbt-airflow-dataops/actions/workflows/python-quality.yml)
 
 # DBT and Airflow Data Pipeline Project
 
